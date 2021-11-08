@@ -277,10 +277,9 @@ module qdma_subsystem_c2h #(
   assign m_axis_qdma_cpl_tdata[511:256]       = 0;
   assign m_axis_qdma_cpl_tdata[255:128]       = 0;
   assign m_axis_qdma_cpl_tdata[127:64]        = 0;
-  assign m_axis_qdma_cpl_tdata[63:32]         = cpl_fifo_dout[31:0];
-  assign m_axis_qdma_cpl_tdata[31:27]         = 0;
-  assign m_axis_qdma_cpl_tdata[26:16]         = cpl_fifo_dout[42:32];
-  assign m_axis_qdma_cpl_tdata[15:0]          = 0;
+  assign m_axis_qdma_cpl_tdata[63:20]         = 0;
+  assign m_axis_qdma_cpl_tdata[19:4]          = cpl_fifo_dout[15:0];
+  assign m_axis_qdma_cpl_tdata[3:0]           = 4'b1000;
 
   assign m_axis_qdma_cpl_ctrl_no_wrb_marker   = 1'b0;
   assign m_axis_qdma_cpl_ctrl_col_idx         = 0;

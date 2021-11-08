@@ -71,7 +71,7 @@ module qdma_subsystem_h2c #(
     .s_axis_tdata  (s_axis_qdma_h2c_tdata),
     .s_axis_tkeep  ({64{1'b1}}),
     .s_axis_tlast  (s_axis_qdma_h2c_tlast),
-    .s_axis_tuser  ({s_axis_qdma_h2c_tuser_mdata[15:0],
+    .s_axis_tuser  ({s_axis_qdma_h2c_tuser_mdata[31:16],
                      s_axis_qdma_h2c_tuser_mty,
                      s_axis_qdma_h2c_tuser_qid}),
     .s_axis_tid    (0),
